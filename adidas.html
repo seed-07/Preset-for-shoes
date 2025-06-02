@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shoe Store - Products</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+  <style>
+    /* Reset */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #f9f9f9;
+      color: #222;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    /* Sticky Header */
+    header {
+      position: sticky;
+      top: 0;
+      background: white;
+      padding: 20px 0;
+      text-align: center;
+      font-weight: 700;
+      font-size: 2rem;
+      color: #111;
+      border-bottom: 2px solid #eee;
+      z-index: 1000;
+      user-select: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    /* Product card */
+    .product {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+      max-width: 420px;
+      margin: 40px auto;
+      padding: 25px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .product:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+
+    /* Product title */
+    .product-name {
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #111;
+      margin: 18px 0 10px;
+      text-align: center;
+      letter-spacing: 0.05em;
+    }
+
+    /* Price */
+    .product-price {
+      color: #d32f2f; /* bold red accent */
+      font-weight: 700;
+      font-size: 1.3rem;
+      text-align: center;
+      margin-bottom: 14px;
+      letter-spacing: 0.04em;
+    }
+
+    /* Description */
+    .product-description {
+      font-size: 1rem;
+      color: #555;
+      text-align: center;
+      margin-bottom: 25px;
+      min-height: 52px;
+      line-height: 1.4;
+    }
+
+    /* WhatsApp button */
+    .whatsapp-button {
+      background: #25d366;
+      color: white;
+      padding: 14px 0;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border-radius: 10px;
+      text-align: center;
+      display: block;
+      width: 100%;
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(37, 211, 102, 0.6);
+      transition: background 0.3s ease;
+      user-select: none;
+    }
+    .whatsapp-button:hover {
+      background: #128c4a;
+      box-shadow: 0 8px 24px rgba(18, 140, 74, 0.8);
+    }
+
+    /* Swiper */
+    .swiper {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+      cursor: grab;
+      user-select: none;
+    }
+    .swiper-slide img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      border-radius: 12px;
+    }
+    .swiper-slide img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Swiper pagination dots - red accent */
+    .swiper-pagination-bullet {
+      background: #d32f2f;
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+    }
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+      box-shadow: 0 0 8px #d32f2f;
+    }
+
+    /* Scroll to top button */
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      background: #d32f2f;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(211, 47, 47, 0.7);
+      display: none;
+      z-index: 1000;
+      transition: background 0.3s ease, transform 0.3s ease;
+      user-select: none;
+    }
+    #scrollTopBtn:hover {
+      background: #9b2323;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+  <header>Shoe Store Collection</header>
+
+  <!-- Product 1 -->
+  <div class="product" data-aos="fade-up" data-aos-duration="900">
+    <div class="swiper product-swiper-1">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="nike.jpg" alt="Running Shoe Image 1" /></div>
+        <div class="swiper-slide"><img src="nike.jpg" alt="Running Shoe Image 2" /></div>
+        <div class="swiper-slide"><img src="nike.jpg" alt="Running Shoe Image 3" /></div>
+      </div>
+      <div class="swiper-pagination swiper-pagination-1"></div>
+    </div>
+    <div class="product-name">SpeedRunner Pro</div>
+    <div class="product-price">₹3,499</div>
+    <div class="product-description">Lightweight running shoe with breathable mesh and responsive cushioning.</div>
+    <a class="whatsapp-button" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20the%20SpeedRunner%20Pro" target="_blank" rel="noopener noreferrer">Buy on WhatsApp</a>
+  </div>
+
+  <!-- Product 2 -->
+  <div class="product" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
+    <div class="swiper product-swiper-2">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="nike.jpg" alt="Casual Sneaker Image 1" /></div>
+        <div class="swiper-slide"><img src="nike.jpg" alt="Casual Sneaker Image 2" /></div>
+        <div class="swiper-slide"><img src="nike.jpg" alt="Casual Sneaker Image 3" /></div>
+      </div>
+      <div class="swiper-pagination swiper-pagination-2"></div>
+    </div>
+    <div class="product-name">Urban Casual</div>
+    <div class="product-price">₹2,299</div>
+    <div class="product-description">Comfortable everyday sneakers with a sleek modern design.</div>
+    <a class="whatsapp-button" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20the%20Urban%20Casual" target="_blank" rel="noopener noreferrer">Buy on WhatsApp</a>
+  </div>
+  <!-- Product 3 -->
+  <div class="product" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
+    <div class="swiper product-swiper-3">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="nike.jpg" alt="Casual Sneaker Image 1" /></div>
+        <div class="swiper-slide"><img src="nike.jpg" alt="Casual Sneaker Image 2" /></div>
+        <div class="swiper-slide"><img src="nike.jpg" alt="Casual Sneaker Image 3" /></div>
+      </div>
+      <div class="swiper-pagination swiper-pagination-3"></div>
+    </div>
+    <div class="product-name">Urban Casual</div>
+    <div class="product-price">₹2,299</div>
+    <div class="product-description">Comfortable everyday sneakers with a sleek modern design.</div>
+    <a class="whatsapp-button" href="https://wa.me/91XXXXXXXXXX?text=I'm%20interested%20in%20the%20Urban%20Casual" target="_blank" rel="noopener noreferrer">Buy on WhatsApp</a>
+  </div>
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" aria-label="Scroll to top">&#8679;</button>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // Sticky header shadow on scroll
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+      } else {
+        header.style.boxShadow = 'none';
+      }
+    });
+
+    // Initialize Swipers
+    new Swiper('.product-swiper-1', {
+      loop: true,
+      pagination: { el: '.swiper-pagination-1', clickable: true },
+    });
+    new Swiper('.product-swiper-2', {
+      loop: true,
+      pagination: { el: '.swiper-pagination-2', clickable: true },
+    });
+    new Swiper('.product-swiper-3', {
+      loop: true,
+      pagination: { el: '.swiper-pagination-3', clickable: true },
+    });
+
+    // Initialize AOS
+    AOS.init({
+      once: true,
+      easing: 'ease-in-out',
+      duration: 800,
+    });
+
+    // Scroll to top button
+    const scrollBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) scrollBtn.style.display = 'block';
+      else scrollBtn.style.display = 'none';
+    });
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>
